@@ -1,0 +1,39 @@
+.sidebar{
+    padding: 20px 10px;
+    height: 100vh;
+    overflow: auto;
+    background-color:rgb(38, 41, 43);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+#ham{
+    margin-left: 10px;
+}
+
+.sidebar svg{
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+
+.newchat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(127, 131, 134);
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.recent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 30px;
+}
