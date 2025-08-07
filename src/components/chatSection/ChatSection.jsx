@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import "./ChatSection.css"
 import Darkmode from '../Darkmode/Darkmode'
-import { LuSendHorizontal } from "react-icons/lu";
-import { dataContext } from '../../context/UserContext';
+import { LuSendHorizontal } from "react-icons/lu"
+import { dataContext } from '../../context/UserContext'
 import user from "../../assets/user.png"
 import ai from "../../assets/ai.png"
 
 
 function ChatSection() {
-  let {sent,input,setInput,showResult,resultData,recentPrompt}=useContext(dataContext)
+  let {sent,input,setInput,showResult,resultData,recentPrompt,loading}=useContext(dataContext)
   return (
     
     <div className='chatsection'>
@@ -24,7 +24,16 @@ function ChatSection() {
             </div>
             <div className="aibox">
               <img src={ai} alt="" width="50px"/>
+              {loading?
+              <div className='loader'>
+                <hr />
+                <hr />
+                <hr />
+              </div>
+              :
               <p>{resultData}</p>
+              }
+              
             </div>
           </div>}
        
@@ -33,9 +42,10 @@ function ChatSection() {
 
       <div className="bottomsection">
           <input onChange={(e)=>setInput(e.target.value)} type="text" placeholder='Enter a prompt' value={input} />
-          <button id="sentbtn" onClick={()=>{
+          {input? <button id="sentbtn" onClick={()=>{
             sent(input)
-          }}><LuSendHorizontal/> </button>
+          }}><LuSendHorizontal/> </button>:null}
+         
           <Darkmode/>
           
       </div>

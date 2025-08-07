@@ -9,6 +9,7 @@
     gap: 20px;
     align-items: start;
     font-size: 20px;
+    scrollbar-width: none;
 }
 #ham{
     margin-left: 10px;
@@ -49,4 +50,10 @@
 }
 .newchat:hover{
     background-color: rgb(198, 195, 191);
+}
+
+@media (max-width:600px) {
+     .sidebar{
+        display: none;
+    }
 }
