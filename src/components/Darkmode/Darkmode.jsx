@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MdOutlineWbSunny } from "react-icons/md";
-import "./darkmode.css"
+import "./Darkmode.css"
 import { LuMoon } from "react-icons/lu";
 
 
